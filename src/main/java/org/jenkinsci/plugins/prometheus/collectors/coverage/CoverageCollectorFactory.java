@@ -56,6 +56,15 @@ public class CoverageCollectorFactory extends BaseCollectorFactory {
             case COVERAGE_LINE_PERCENT:
                 return saveBuildCollector(new CoverageLinePercentGauge(labelNames, namespace, subsystem));
 
+            case COVERAGE_METHOD_COVERED:
+                return saveBuildCollector(new CoverageMethodCoveredGauge(labelNames, namespace, subsystem));
+            case COVERAGE_METHOD_MISSED:
+                return saveBuildCollector(new CoverageMethodMissedGauge(labelNames, namespace, subsystem));
+            case COVERAGE_METHOD_TOTAL:
+                return saveBuildCollector(new CoverageMethodTotalGauge(labelNames, namespace, subsystem));
+            case COVERAGE_METHOD_PERCENT:
+                return saveBuildCollector(new CoverageMethodPercentGauge(labelNames, namespace, subsystem));
+
             default:
                 return new NoOpMetricCollector<>();
         }

@@ -134,7 +134,7 @@ class CodeCoverageCollectorTest {
             CodeCoverageCollector sut = new CodeCoverageCollector();
 
             List<Collector.MetricFamilySamples> collect = sut.collect();
-            assertEquals(20, collect.size(), "20 metrics should have been collected");
+            assertEquals(24, collect.size(), "24 metrics should have been collected");
         }
     }
 }

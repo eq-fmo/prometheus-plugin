@@ -85,6 +85,11 @@ public class CodeCoverageCollector extends Collector {
         collectors.add(factory.createCoverageRunCollector(CollectorType.COVERAGE_LINE_TOTAL, new String[]{jobAttributeName}));
         collectors.add(factory.createCoverageRunCollector(CollectorType.COVERAGE_LINE_PERCENT, new String[]{jobAttributeName}));
 
+        collectors.add(factory.createCoverageRunCollector(CollectorType.COVERAGE_METHOD_COVERED, new String[]{jobAttributeName}));
+        collectors.add(factory.createCoverageRunCollector(CollectorType.COVERAGE_METHOD_MISSED, new String[]{jobAttributeName}));
+        collectors.add(factory.createCoverageRunCollector(CollectorType.COVERAGE_METHOD_TOTAL, new String[]{jobAttributeName}));
+        collectors.add(factory.createCoverageRunCollector(CollectorType.COVERAGE_METHOD_PERCENT, new String[]{jobAttributeName}));
+
         collectors.forEach(c -> c.calculateMetric(lastBuild, new String[]{job.getFullName()}));
 
         return collectors.stream()

@@ -69,6 +69,11 @@ public enum CollectorType {
     COVERAGE_LINE_TOTAL("coverage_line_total"),
     COVERAGE_LINE_PERCENT("coverage_line_percent"),
 
+    COVERAGE_METHOD_COVERED("coverage_method_covered"),
+    COVERAGE_METHOD_MISSED("coverage_method_missed"),
+    COVERAGE_METHOD_TOTAL("coverage_method_total"),
+    COVERAGE_METHOD_PERCENT("coverage_method_percent"),
+
     JOB_LOG_UPDATED_GAUGE("job_log_updated");
 
     private final String name;
