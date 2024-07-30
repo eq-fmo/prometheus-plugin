@@ -1,8 +1,5 @@
 package org.jenkinsci.plugins.prometheus;
 
-
-
-
 import hudson.model.Job;
 import hudson.model.Run;
 import io.jenkins.plugins.coverage.metrics.steps.CoverageBuildAction;
